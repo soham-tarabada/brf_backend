@@ -35,6 +35,10 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "Server is running on PORT 5000" });
 });
 
+app.get("/*", (req, res) => {
+  res.json({ status: "Welcome To BRF Website !" });
+});
+
 // Seeder for default admin
 async function seedDefaultAdmin() {
   const defaultUsername = "superadmin@yopmail.com";
